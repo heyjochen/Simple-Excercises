@@ -11,3 +11,14 @@ Waiting for translations and Feedback! Thanks!
 function paperwork(n, m) {
     return   (n < 0 || m < 0) ? 0 : n*m
 }
+
+
+
+function bmi(weight, height) {
+    let calcBMI =  weight / (height*height)
+      return   (calcBMI <= 18.5) ? 'Underweight' : 
+         (calcBMI <= 25) ? 'Normal' :
+         (calcBMI <= 30) ? 'Overweight' :
+        'Obese'
+  }
+bmi(80, 1.80)
