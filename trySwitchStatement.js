@@ -10,4 +10,5 @@ switch (beer) {
     case 'Budweiser':
         alert('Are you sure about that?')
         break;
+    default: alert('You don\'t like any beer?')
 }
