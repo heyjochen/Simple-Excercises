@@ -25,3 +25,18 @@ function daysInMonth (month) {
     }
     return days
 }
+
+/* 
+We can be more concise and efficient, combining certain months and ignoring reassigning a value to days
+*/
+
+function howManyDays(month){
+    switch (month){
+       case 2: return 28
+       case 4:
+       case 6:
+       case 9:
+       case 11: return 30
+    }
+    return 31
+  }
