@@ -32,3 +32,8 @@ function returnSum (arr) {
 }
 
 returnSum([1, 5.2, 4, 0, -1])
+
+// again we could use the reduce function
+function returnSum (arr) {
+return arr.reduce((a, b) => a + b, 0);
+}
