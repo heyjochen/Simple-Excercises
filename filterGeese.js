@@ -15,11 +15,11 @@ The elements in the returned array should be in the same order as in the initial
 
 */
 
-const GEESE = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
 const birds = ["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]
 // create a function with arr as parameter
 function returnNoDamnGeese (birds) {
-    const gooseFilter = birds => birds.filter(bird => !GEESE.includes(bird));
+    let geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+    return birds.filter(b => !geese.includes(b));
 }
 
 
