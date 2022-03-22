@@ -42,6 +42,12 @@ console.table(inventors)
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live all together?
 
+//create foreach and add age to object
+inventors.forEach (obj => obj.age = obj.passed - obj.year)
+
+let inventoryears = inventors.reduce ((total, person) => total + person.passed - person.year, 0)
+
+
 // 5. Sort the inventors by years lived
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
