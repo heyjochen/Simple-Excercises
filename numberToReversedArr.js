@@ -10,6 +10,11 @@ Example:
 */
 
 function digitize(n) {
-    return Array.from(String(n), Number)
+    return Array.from(String(n), Number).reverse()
 } 
 digitize(348597)
+
+//another solution
+function digitize(n) {
+    return String(n).split('').map(Number).reverse()
+  }
