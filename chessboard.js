@@ -12,17 +12,38 @@ Passing this string to console.log should show something like this:
 # # # #
 When you have a program that generates this pattern, define a binding size = 8 and change the program so that it works for any size, outputting a grid of the given width and height. */
 
-// 8 rows and 8 colums
-// first row starts with empty space
-// second row starts with octathorpe
-// third row starts with empty space
-// first row for loop 0 to 7 starting with empty and then adding octathorpe
-// second row for loop 0 to 7 starting with octathorpe and then adding empty space
-// that means we need a loop inside a loop
-// create a loop for the row that has a loop for the column
+/*
 
-let rows = ''
-let columns = ''
-for (let i = 0; i < 7; i++) {
-    
+THOUGHTS
+
+- If we look at the chessboard having column and rows, we can see a pattern. If column + row is even, we have a space. If column + row is odd, we see an octathorpe.
+- From there we need two for loops: The first one will create a row, the second one will create the columns and has to be nested inside the first. 
+- Both for loops start at 1 and go to <= 7, with the second one introducing a new line after it runs.
+
+PSEUDOCODE
+
+create variable board = ' '
+create variable size = 8
+create for loop (let i = 1; i <=  size; i++)
+    create nested for loop (let j = 1: j <= size; j++)
+    if (i+j % 2 === 0) {
+        board += ' '
+    } else { board += '#' }
+} board += '\n'
+console.log(board)
+
+*/
+let board = ''
+let size = 8
+
+for (let i = 1; i <= size; i++) {
+    for (let j = 1; j <= size; j++) {
+        if ((i+j) % 2 === 0){
+            board += ' '
+        } else { 
+            board += '#'
+        }
+    } 
+    board += '\n'
 }
+console.log(board)
