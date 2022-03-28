@@ -1,4 +1,4 @@
-//Get the total shootingScore of force users only.
+//Get the total score of force users only.
 let personnel = [
     {
       id: 5,
@@ -47,6 +47,6 @@ function getShootingScore (personnel) {
 getShootingScore(personnel)
 
 
-// It can be even shorter using reduce with a condition (replacing the filter method) and then summing up the scores
+// It can be even shorter using reduce with a condition (replacing the filter method) if true accumulate if false return acc and then summing up the scores
 
 const totalJediScore = personnel.reduce((acc, person) => person.isForceUser ? acc + person.pilotingScore + person.shootingScore : acc, 0);
