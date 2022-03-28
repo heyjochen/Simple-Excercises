@@ -27,3 +27,9 @@ function countSheeps(arrayOfSheep) {
     })
     return sum
   }
+
+// A smart way would be to filter the array by booleans and return the length
+
+function countSheeps(arrayOfSheeps) {
+    return arrayOfSheeps.filter(Boolean).length;
+}
