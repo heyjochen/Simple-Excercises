@@ -16,6 +16,8 @@ alert( calculator.sum() );
 alert( calculator.mul() );
 */
 
+// Written as simple object
+
 let calculator = {
 
     sum () { return this.a + this.b },
@@ -24,4 +26,18 @@ let calculator = {
               this.b = +prompt('b?')
             }
 
+}
+
+// Written as Constructor function
+function Calculator () {
+    this.sum = function () {
+        return this.a + this.b
+    }
+    this.mul = function () {
+        return this.a * this.b
+    }
+    this.read = function () {
+        this.a = +prompt('a?')
+        this.b = +prompt('b?')
+    }
 }
