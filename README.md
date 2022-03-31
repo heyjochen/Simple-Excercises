@@ -40,6 +40,11 @@ The fizzbuzz challenge can be simplified by checking for
 (i % 15 === 0) instead of (i % 15 === && i % 3 === 0)
 ```
 
+If we want to calculate the amount of odd numbers below a certain number n we can just divide that number by two and round down to the closest integer
+```js
+const oddCount = n => Math.floor(n/2)
+```
+
 <!-- 
 ```html
 <h1>Some HTML code I'm proud of</h1>
