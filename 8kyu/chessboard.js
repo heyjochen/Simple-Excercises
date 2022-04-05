@@ -22,28 +22,31 @@ THOUGHTS
 
 PSEUDOCODE
 
-create variable board = ' '
-create variable size = 8
-create for loop (let i = 1; i <=  size; i++)
-    create nested for loop (let j = 1: j <= size; j++)
-    if (i+j % 2 === 0) {
-        board += ' '
-    } else { board += '#' }
-} board += '\n'
-console.log(board)
-
+//P: size of the chessboard as a number
+//R: a whole chessboard with rows and columns, empty spaces and octathorpes
+//E:  # # # #
+# # # # 
+ # # # #
+# # # # 
+ # # # #
+# # # # 
+ # # # #
+# # # #
+//P: Look at the chessboard and recognize a pattern, row + column % 2 === 0 then we print a space, else we print a octathorpe
+//P: We know we need two loops one prints the row, one prints the column which is nested in the first loop
+//P: We need a chessboard variable that is empty, and we need to declare the octathorpe variable with a octathorpe as string value
+ 
 */
-let board = ''
-let size = 8
-
-for (let i = 1; i <= size; i++) {
-    for (let j = 1; j <= size; j++) {
-        if ((i+j) % 2 === 0){
-            board += ' '
-        } else { 
-            board += '#'
-        }
-    } 
-    board += '\n'
+let chessboard = ''
+let octathorpe = '#'
+function makeChessboard(size) {
+    for (let row = 1; row <= size; row++) {
+        for (let column = 1; column <= size; column++) {
+            if ((row+column) % 2 === 0) {
+                chessboard += ' '
+            } else {chessboard += octathorpe}
+        } chessboard += '\n'
+    }
+    console.log(chessboard)
 }
-console.log(board)
+makeChessboard(8)
