@@ -14,6 +14,11 @@ Input: 123456789 Output: 987654321
 //E:42145 --> 54421
 //P: number.toString().split('') gives us an array, then sort that array, then join to string, then to number
 function descendingOrder(n){
-    const arrToSort = n.toString().split('').sort((a,b) => b - a)
+    const arrToSort = n.toString().split('').sort((a,b) => b - a).join('')
     return Number(arrToSort.join(''))
     }
+
+//Another approach would be to use parseInt on String(n)
+function descendingOrder(n){
+    return parseInt(String(n).split('').sort((a,b) => b - a).join(''))
+  }
