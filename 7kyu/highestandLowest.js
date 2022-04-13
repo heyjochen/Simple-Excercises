@@ -19,5 +19,7 @@ Output string must be two numbers separated by a single space, and highest numbe
 
 function highAndLow(numbers){
     numbers =  numbers.split(' ')
-    return `${Math.max(...arraaaayd)} ${Math.min(...arraaaayd)}`
+    return `${Math.max(...numbers)} ${Math.min(...numbers)}`
 }   
+
+highAndLow("1 2 3 4 5")
