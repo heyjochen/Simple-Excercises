@@ -14,7 +14,6 @@ Note: for this kata y isn't considered a vowel.
 */
 
 // Let's solve this fast and easy using regex
-
 function disemvowel(str) {
     return str.replace(/[aeiou]/gi, '')
   }
