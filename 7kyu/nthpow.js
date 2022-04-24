@@ -17,10 +17,15 @@ Examples
 
 
 function modifiedSum(a, n) {
-    let powArr = a.map(e=>Math.pow(e,n))
+    let powArr = a.map(e => Math.pow(e,n))
     let sumOfPowArr = powArr.reduce((a,b) => a+b,0);
     let sumOfArr = a.reduce((a,b) => a+b,0)
     return sumOfPowArr - sumOfArr
   }
 
+  modifiedSum([1, 2, 3], 3)
+
+
+  const modifiedSum = (arr, exp) => 
+  arr.reduce((a, b) => a + Math.pow(b, exp) - b, 0);
   modifiedSum([1, 2, 3], 3)
