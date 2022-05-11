@@ -4,7 +4,7 @@ Complete the function that receives as input a string, and produces outputs acco
 Input	Output
 "Jabroni"	"Patron Tequila"
 "School Counselor"	"Anything with Alcohol"
-"Programmer"	"Hipster Craft Beer"
+"Programmer"	"cHipster Craft Beer"
 "Bike Gang Member"	"Moonshine"
 "Politician"	"Your tax dollars"
 "Rapper"	"Cristal"
