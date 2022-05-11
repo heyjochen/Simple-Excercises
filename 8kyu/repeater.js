@@ -9,6 +9,6 @@ Good Luck!
 */
 
 function doubleChar(str) {
-    return str.split('').map(e => e.repeat(2)).join('')
+    return str.split('').map(e => e + e).join('')
 }
   
