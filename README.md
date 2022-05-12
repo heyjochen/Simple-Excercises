@@ -1,8 +1,6 @@
 # Codewars: <a href="https://github.com/heyjochen/CodeWars" target="_blank">Daily Coding Challenges</a>
 <a href="" target="_blank"><img src="/README.png" /></a>
 
-Short Intro Sentence
-
 ## Tech used: ![JAVASCRIPT BADGE](https://img.shields.io/static/v1?label=|&message=JAVASCRIPT&color=3c7f5d&style=flat-square&logo=javascript)
 
 A repository filled with codewars challenges (kata), pushing at least 7 challenges a week.
