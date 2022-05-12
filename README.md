@@ -1,5 +1,5 @@
 # Codewars: <a href="https://github.com/heyjochen/CodeWars" target="_blank">Daily Coding Challenges</a>
-<a href="" target="_blank"><img src="readme.png" /></a>
+<a href="" target="_blank"><img src="/readme.png" /></a>
 
 Short Intro Sentence
 
