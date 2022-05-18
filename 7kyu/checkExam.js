@@ -18,6 +18,22 @@ checkExam(["b", "c", "b", "a"], ["",  "a", "a", "c"]) → 0
 //P: array1, array2
 //R: score, correct answer equals +4, -1 for incorrect, 0 for blank ""
 //E:checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"]) → 16
-//P: reduce function
+//P: loop through both arrays
 
-checkExam = (x, y) => (x = y.reduce((s, e, i) => s + (e === x[i] ? 4 : e === '' ? 0 : -1), 0)) > 0 ? x : 0;
+function checkExam(array1, array2) {
+    let score = 0;
+    for (let i = 0; i < array1.length; i++){
+        if (array1[i] == array2[i]) {
+        score += 4;
+        }
+        
+        else if (array2[i] === ""){
+        score += 0
+        }
+        
+        else {
+        score -= 1
+        }
+    }
+    return (score < 0) ? 0 : score;     
+}  
