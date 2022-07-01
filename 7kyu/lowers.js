@@ -14,3 +14,17 @@ More examples in test cases. Good luck!
 
 
 */
+
+//P: string
+//R: string all lower or upper
+//E: ("coDe") = "code", ("CODe") = "CODE"
+//P: filter for all uppercase, then combine to length/2,
+
+function solve(s) {
+  const upper = s.split("").filter((char) => char === char.toUpperCase());
+  return upper.length > s.length / 2
+    ? s.toUpperCase()
+    : upper.length < s.length / 2
+    ? s.toLowerCase()
+    : s.toLowerCase();
+}
