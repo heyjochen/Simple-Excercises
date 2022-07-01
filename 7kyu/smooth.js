@@ -38,4 +38,3 @@ function isSmooth(arr) {
     return arr[0] === arr[length - 1] && arr[Math.floor(length / 2)] === arr[0];
   }
 }
-a;
