@@ -27,6 +27,7 @@ let containsDuplicate = function (nums) {
   }
   return false;
 };
+
 // could use hashmap
 let containsDuplicate2 = function (nums) {
   let obj = {};
@@ -39,7 +40,6 @@ let containsDuplicate2 = function (nums) {
 };
 
 // could create new Set and compare to length
-
 let containsDuplicate3 = function (nums) {
   return new Set(nums).size !== nums.length;
 };
