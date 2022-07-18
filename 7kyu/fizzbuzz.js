@@ -18,20 +18,7 @@ fizzbuzz(3) -->  [1, 2, "Fizz"]
 //P: number n 
 //R: array containing numbers 1 to n, where n is the parametered value
 //E: fizzbuzz(3) -->  [1, 2, "Fizz"]
-//P: empty array, loop from 1 to n, conditional push
-
-// Return an array
-function fizzbuzz(n)
-{
-    let fizzBArray = [];
-    for (let i = 1; i <= n; i++) {
-        if (i % 15 === 0) fizzBArray.push('FizzBuzz')
-        else if (i % 5 === 0) fizzBArray.push('Buzz')
-        else if (i % 3 === 0) fizzBArray.push('Fizz')
-        else fizzBArray.push(i)  
-        }
-        return fizzBArray
-    }
+//P: empty array, map through with ternary
 
 
 const fizzbuzz = (n) => 

@@ -14,6 +14,19 @@ The maximum product obtained from multiplying 2 * 3 = 6, and they're adjacent nu
 
 */
 
+//P: an array of  integers
+//R: maximum product of adjacent numbers
+//E: adjacentElementsProduct([1, 2, 3]); ==> return 6
+//P: adjacent means arr[i] === arr[i+1], acc * cur > cur * arr[
+    // calculate all the products
+    // run through the array
+    // when is a number adjacent and the max product?
+
+
 function adjacentElementsProduct(array) {
-  // max product
+    let newArr = []
+    for(i=0; i < array.length-1; i++){
+    newArr.push(array[i]*array[i+1])
+    }  
+    return Math.max(...newArr)
 }
