@@ -43,7 +43,7 @@ const search = (nums, target) => {
   let low = 0;
   let high = nums.length - 1;
   while (low < high) {
-    let mid = low + Math.floor((high - low + 1) / 2); // look to the right
+    let mid = low + Math.floor((high - low + 1) / 2); // in case of very big numbers
     if (target < nums[mid]) {
       // if target is to the left
       high = mid - 1;
