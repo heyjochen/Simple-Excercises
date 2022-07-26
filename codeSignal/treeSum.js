@@ -13,7 +13,6 @@ treeSum(a); // -> 21
 */
 
 // iterative solution DFS
-
 const treeSum = (root) => {
   if (!root) return 0;
   let sum = 0;
@@ -30,7 +29,6 @@ const treeSum = (root) => {
 };
 
 // recursive solution DFS
-
 const treeSum2 = (root) => {
   if (root === null) return 0;
 
@@ -38,7 +36,6 @@ const treeSum2 = (root) => {
 };
 
 // iterative solution BFS
-
 const treeSum3 = (root, target) => {
   if (root === null) return 0;
 
