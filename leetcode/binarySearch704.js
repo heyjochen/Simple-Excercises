@@ -53,3 +53,7 @@ const search = (nums, target) => {
   }
   return nums[low] === target ? low : -1;
 };
+let nums = [-1, 0, 3, 5, 9, 12],
+  target = 9;
+
+  search(nums, target)
