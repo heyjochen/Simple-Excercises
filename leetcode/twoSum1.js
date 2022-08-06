@@ -38,17 +38,13 @@ let twoSum = function (nums, target) {
 
 //nums = [2,7,11,15], target = 9
 let twoSum2 = (nums, target) => {
-  let hash = {};
-
-  for (let i = 0; i < nums.length; i++) {
-    let num = nums[i];
-
-    let difference = target - num;
-
-    if (hash[num] != undefined) {
-      return [hash[num], i];
-    } else {
-      hash[difference] = i;
-    }
+  if (nums.length === 2) return [0, 1];
+  const len = nums.length;
+  let map = {};
+  for (let i = 0; i < len; i++) {
+    let n = target - nums[i];
+    let find = map[n];
+    if (find !== undefined) return [find, i];
+    else map[nums[i]] = i;
   }
 };
