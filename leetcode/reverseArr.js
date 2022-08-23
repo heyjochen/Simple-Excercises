@@ -17,12 +17,20 @@ Output: ["h","a","n","n","a","H"]
 
 */
 
-const reverseString = (s) => {
-  for (let [a, b] = [0, s.length - 1]; a < b; a++, b--) {
-    [s[a], s[b]] = [s[b], s[a]];
+
+// iterative
+var reverseString = function (s) {
+  let i = 0,
+    j = s.length - 1;
+  while (i < j) {
+    [s[i], s[j]] = [s[j], s[i]];
+    i++;
+    j--;
   }
 };
 
+
+// recursive
 const reverseString2 = (s) => {
   reverse(0, s.length - 1);
 };
