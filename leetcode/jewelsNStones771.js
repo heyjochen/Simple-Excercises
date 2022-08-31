@@ -37,3 +37,17 @@ var numJewelsInStones = function (jewels, stones) {
 
   return count;
 };
+
+// or with two loops
+
+const numJewelsInStones2 = function (jewels, stones) {
+  let count = 0;
+  for (let i = 0; i < stones.length; i++) {
+    for (let char of jewels) {
+      if (char === stones[i]) {
+        count++;
+      }
+    }
+  }
+  return count;
+};
