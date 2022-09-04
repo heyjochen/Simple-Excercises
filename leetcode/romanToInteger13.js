@@ -26,10 +26,8 @@ const romanToInt = function (s) {
   let num = 0;
 
   for (let i = 0; i < s.length; i++) {
-    const curr = map[s[i]],
-      next = map[s[i + 1]];
-    if (curr < next) num -= curr;
-    else num += curr;
+    if (map[s[i]] < map[s[i + 1]]) num -= map[s[i]];
+    else num += map[s[i]];
   }
   return num;
 };
