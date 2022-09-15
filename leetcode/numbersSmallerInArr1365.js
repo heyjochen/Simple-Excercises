@@ -34,7 +34,7 @@ var smallerNumbersThanCurrent = function (nums) {
   const hash = {};
 
   return nums.map((n) => {
-    // This way we're not running the indexOf call for duplicate values -- only the first.
+    // DP memoization implementation
     if (!(n in hash)) {
       hash[n] = sorted.indexOf(n);
     }
