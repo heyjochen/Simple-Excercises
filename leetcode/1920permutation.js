@@ -21,10 +21,13 @@ ans = [nums[nums[0]], nums[nums[1]], nums[nums[2]], nums[nums[3]], nums[nums[4]]
  * @param {number[]} nums
  * @return {number[]}
  */
-var buildArray = function(nums) {
-    let arr= []
-    for (let i=0;  i < nums.length; i++) {
-        arr.push(nums[nums[i]])
-    }
-    return arr
+var buildArray = function (nums) {
+  // let arr= []
+  // for (let i=0;  i < nums.length; i++) {
+  //     arr.push(nums[nums[i]])
+  // }
+  // return arr
+
+  // simple map works as well
+  return nums.map((_, i) => nums[nums[i]]);
 };
