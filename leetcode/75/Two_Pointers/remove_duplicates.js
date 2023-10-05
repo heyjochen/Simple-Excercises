@@ -1,15 +1,15 @@
 const removeDuplicates = (arr) => {
-  let current = 1,
-    insert = 1;
+  let left = 1,
+    right = 1;
 
-  while (current < arr.length) {
-    if (arr[insert - 1] !== arr[current]) {
-      arr[insert] = arr[current];
-      insert++;
+  while (right < arr.length) {
+    if (arr[left - 1] !== arr[right]) {
+      arr[left] = arr[right];
+      left++;
     }
-    current++;
+    right++;
   }
-  return insert;
+  return left;
 };
 
 console.log(removeDuplicates([1, 2, 2, 3, 3, 3, 3, 5, 6, 6, 9]));
