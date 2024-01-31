@@ -1,24 +1,23 @@
-var minEatingSpeed = function (piles, h) {
+var minEatingSpeed = function(piles, h) {
   let [left, right] = [1, Math.max(...piles)];
 
-  while (left <= right) {
+  while (left < right) {
     let mid = left + Math.floor((right - left) / 2);
-    const hourSpentEating = getHourSpent(mid, piles);
+    const eatingHours = getHours(mid, piles)
 
-    if (hourSpentEating <= h) {
-      right = mid - 1;
+    if (h < eatingHours) {
+      left = mid + 1
     } else {
-      left = mid + 1;
+      right = mid
     }
   }
-
-  return left;
+  return left
 };
 
-const getHourSpent = (mid, piles, hourSpent = 0) => {
+const getHours = (mid, piles, hours = 0) => {
   for (const pile of piles) {
-    hourSpent += Math.ceil(pile / mid);
+    hours += Math.ceil(pile / mid)
   }
 
-  return hourSpent;
-};
+  return hours
+}
