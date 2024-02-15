@@ -39,21 +39,21 @@ Constraints:
 
 // lastly when nums[lo] === target return lo otherwise we return -1
 
-const search = (nums, target) => {
-  let low = 0;
-  let high = nums.length - 1;
-  while (low < high) {
-    let mid = low + Math.floor((high - low + 1) / 2); // in case of very big numbers
-    if (target < nums[mid]) {
-      // if target is to the left
-      high = mid - 1;
+var search = function (nums, target) {
+  let [left, right] = [0, nums.length - 1];
+
+  while (left <= right) {
+    const mid = Math.floor((left + right) / 2);
+
+    if (target === nums[mid]) {
+      return mid;
+    } else if (target < nums[mid]) {
+      right = mid - 1;
     } else {
-      low = mid; // if it is to the right
+      left = mid + 1;
     }
   }
-  return nums[low] === target ? low : -1;
-};
-let nums = [-1, 0, 3, 5, 9, 12],
-  target = 9;
 
-  search(nums, target)
+  return -1;
+};
+
