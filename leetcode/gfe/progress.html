@@ -1,0 +1,33 @@
+<div id="progress-bar">
+  <div id="progress"></div>
+</div>
+
+<script>
+  function animateProgressBar(duration) {
+    const progress = document.querySelector("#progress");
+    progress.style.transition = `width ${duration}ms linear`;
+    progress.style.width = "0%";
+    // Set the final width after a short delay to allow the transition to take effect
+    setTimeout(() => {
+      progress.style.width = "100%";
+    }, 10);
+  }
+
+  animateProgressBar(3000);
+</script>
+
+<style>
+  #progress-bar {
+    width: 300px;
+    height: 20px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    overflow: hidden;
+  }
+
+  #progress {
+    width: 0%;
+    height: 100%;
+    background-color: #4caf50;
+  }
+</style>
